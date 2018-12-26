@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @angel.name %>
+</p>
+
+<p>
+  <strong>Wings:</strong>
+  <%= @angel.wings %>
+</p>
+
+<%= link_to 'Edit', edit_angel_path(@angel) %> |
+<%= link_to 'Back', angels_path %>

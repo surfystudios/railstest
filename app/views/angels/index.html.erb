@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Angels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Wings</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @angels.each do |angel| %>
+      <tr>
+        <td><%= angel.name %></td>
+        <td><%= angel.wings %></td>
+        <td><%= link_to 'Show', angel %></td>
+        <td><%= link_to 'Edit', edit_angel_path(angel) %></td>
+        <td><%= link_to 'Destroy', angel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Angel', new_angel_path %>
