@@ -34,7 +34,7 @@ class PagesController < ApplicationController
     @page.destroy
     redirect_to pages_path
   end
-
+#insert comment
   private
 
   def page_params
